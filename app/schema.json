@@ -1,0 +1,200 @@
+{
+  "version": "1.0",
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "normalized_max": 10,
+    "labels": {
+      "0": "Pas du tout",
+      "1": "Très faible",
+      "2": "Faible",
+      "3": "Correct",
+      "4": "Très bon"
+    }
+  },
+  "dimensions": [
+    {
+      "id": "market",
+      "label": "Client / Marché",
+      "description": "Compréhension du besoin, validation marché et proposition de valeur.",
+      "questions": [
+        {
+          "id": "market_1",
+          "label": "Le problème client est-il clairement identifié et documenté ?"
+        },
+        {
+          "id": "market_2",
+          "label": "Le segment de clientèle est-il clairement défini ?"
+        },
+        {
+          "id": "market_3",
+          "label": "Existe-t-il des preuves de besoin (tests, utilisateurs, clients, lettres d’intention) ?"
+        },
+        {
+          "id": "market_4",
+          "label": "Les clients sont-ils prêts à payer pour la solution proposée ?"
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "label": "Technologie",
+      "description": "Différenciation technologique, maturité et maîtrise technique.",
+      "questions": [
+        {
+          "id": "tech_1",
+          "label": "La technologie apporte-t-elle une différenciation réelle par rapport à l’existant ?"
+        },
+        {
+          "id": "tech_2",
+          "label": "Le niveau de maturité technologique est-il cohérent avec l’ambition du projet ?"
+        },
+        {
+          "id": "tech_3",
+          "label": "La technologie est-elle maîtrisée en interne ou par des partenaires identifiés ?"
+        },
+        {
+          "id": "tech_4",
+          "label": "Existe-t-il des verrous techniques majeurs non résolus ?"
+        }
+      ]
+    },
+    {
+      "id": "business_model",
+      "label": "Modèle économique",
+      "description": "Capacité à créer, délivrer et capter de la valeur.",
+      "questions": [
+        {
+          "id": "bm_1",
+          "label": "Le modèle économique est-il clairement défini ?"
+        },
+        {
+          "id": "bm_2",
+          "label": "Les sources de revenus sont-elles identifiées et réalistes ?"
+        },
+        {
+          "id": "bm_3",
+          "label": "La structure de coûts est-elle connue et maîtrisée ?"
+        },
+        {
+          "id": "bm_4",
+          "label": "Le modèle économique est-il scalable ?"
+        }
+      ]
+    },
+    {
+      "id": "leadership",
+      "label": "Leadership",
+      "description": "Vision, capacité de décision et pilotage stratégique.",
+      "questions": [
+        {
+          "id": "lead_1",
+          "label": "La vision du projet est-elle claire et partagée ?"
+        },
+        {
+          "id": "lead_2",
+          "label": "Le porteur de projet prend-il des décisions structurantes ?"
+        },
+        {
+          "id": "lead_3",
+          "label": "Le leadership permet-il de prioriser et d’arbitrer efficacement ?"
+        }
+      ]
+    },
+    {
+      "id": "team",
+      "label": "Équipe",
+      "description": "Compétences, complémentarité et capacité d’exécution.",
+      "questions": [
+        {
+          "id": "team_1",
+          "label": "Les compétences clés nécessaires au projet sont-elles présentes ?"
+        },
+        {
+          "id": "team_2",
+          "label": "L’équipe est-elle complémentaire (technique, business, produit) ?"
+        },
+        {
+          "id": "team_3",
+          "label": "L’équipe est-elle suffisamment disponible et engagée ?"
+        }
+      ]
+    },
+    {
+      "id": "partners",
+      "label": "Partenaires clés",
+      "description": "Capacité à s’appuyer sur un écosystème pertinent.",
+      "questions": [
+        {
+          "id": "partners_1",
+          "label": "Des partenaires clés (techniques, commerciaux, industriels) sont-ils identifiés ?"
+        },
+        {
+          "id": "partners_2",
+          "label": "Le projet bénéficie-t-il d’un accès à un écosystème structurant ?"
+        },
+        {
+          "id": "partners_3",
+          "label": "Le projet dépend-il fortement d’un partenaire unique ?"
+        }
+      ]
+    },
+    {
+      "id": "metrics",
+      "label": "Métriques & pilotage",
+      "description": "Capacité à mesurer la performance et à piloter le projet.",
+      "questions": [
+        {
+          "id": "metrics_1",
+          "label": "Des indicateurs de performance (KPI) sont-ils définis ?"
+        },
+        {
+          "id": "metrics_2",
+          "label": "Le suivi des indicateurs est-il régulier et structuré ?"
+        },
+        {
+          "id": "metrics_3",
+          "label": "Les décisions sont-elles prises sur la base de données objectives ?"
+        }
+      ]
+    },
+    {
+      "id": "ip",
+      "label": "Propriété intellectuelle (DPI)",
+      "description": "Protection, valorisation et liberté d’exploitation.",
+      "questions": [
+        {
+          "id": "ip_1",
+          "label": "Les éléments de propriété intellectuelle sont-ils identifiés ?"
+        },
+        {
+          "id": "ip_2",
+          "label": "Une stratégie de protection est-elle définie ?"
+        },
+        {
+          "id": "ip_3",
+          "label": "Le risque de dépendance ou de contrefaçon est-il maîtrisé ?"
+        }
+      ]
+    },
+    {
+      "id": "funding",
+      "label": "Financement",
+      "description": "Préparation et crédibilité financière du projet.",
+      "questions": [
+        {
+          "id": "fund_1",
+          "label": "Le besoin de financement est-il clairement identifié ?"
+        },
+        {
+          "id": "fund_2",
+          "label": "Un plan de financement crédible est-il formalisé ?"
+        },
+        {
+          "id": "fund_3",
+          "label": "Le projet est-il aligné avec les attentes des financeurs ciblés ?"
+        }
+      ]
+    }
+  ]
+}
