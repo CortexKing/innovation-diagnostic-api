@@ -1,17 +1,34 @@
-RAW_MAX = 4
-NORMALIZED_MAX = 10
+from collections import defaultdict
 
+def calculer_scores(schema, reponses):
+    totaux_dimensions = defaultdict(float)
+    poids_dimensions = defaultdict(float)
 
-def normalize(value: int) -> float:
-    return round((value / RAW_MAX) * NORMALIZED_MAX, 2)
+    for question in schema["questions"]:
+        qid = question["id"]
+        if qid not in reponses:
+            continue
 
+        valeur = reponses[qid]
+        poids = question.get("weight", 1)
+        dimension = question["dimension"]
+        valeur_max = question["scale"]["max"]
 
-def compute_dimension_score(answers, question_ids):
-    scores = [normalize(answers[q]) for q in question_ids if q in answers]
-    return round(sum(scores) / len(scores), 2) if scores else 0.0
+        score_normalise = (valeur / valeur_max) * 100
 
+        totaux_dimensions[dimension] += score_normalise * poids
+        poids_dimensions[dimension] += poids
 
-def compute_global_score(dimension_scores):
-    return round(
-        sum(dimension_scores.values()) / len(dimension_scores), 2
-    ) if dimension_scores else 0.0
+    scores_dimensions = {
+        dim: round(totaux_dimensions[dim] / poids_dimensions[dim], 1)
+        for dim in totaux_dimensions
+    }
+
+    score_global = round(
+        sum(scores_dimensions.values()) / len(scores_dimensions), 1
+    )
+
+    return {
+        "dimensions": scores_dimensions,
+        "global": score_global
+    }
