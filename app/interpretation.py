@@ -1,25 +1,23 @@
-def interpret_dimension(score: float):
-    if score < 4:
-        return "fragile"
-    elif score < 7:
-        return "en_construction"
+def interpreter_score_global(score):
+    if score >= 80:
+        return "Très forte maturité d’innovation. L’enjeu principal est désormais le passage à l’échelle."
+    elif score >= 60:
+        return "Bon socle d’innovation. Des axes d’amélioration ciblés peuvent générer une forte accélération."
+    elif score >= 40:
+        return "Capacité d’innovation moyenne. Une structuration des démarches est prioritaire."
     else:
-        return "solide"
+        return "Risque élevé sur l’innovation. Une remise à plat stratégique est recommandée."
 
 
-def detect_profiles(scores):
-    profiles = []
+def interpreter_dimensions(scores_dimensions):
+    interpretations = {}
 
-    if scores.get("technology", 0) > 7 and scores.get("market", 0) < 4:
-        profiles.append("Risque de techno-push")
+    for dimension, score in scores_dimensions.items():
+        if score >= 70:
+            interpretations[dimension] = "Point fort structuré et maîtrisé."
+        elif score >= 50:
+            interpretations[dimension] = "Niveau correct mais perfectible."
+        else:
+            interpretations[dimension] = "Point de fragilité nécessitant une action prioritaire."
 
-    if scores.get("market", 0) > 7 and scores.get("business_model", 0) < 4:
-        profiles.append("Risque de monétisation")
-
-    if all(v >= 6 for v in scores.values()):
-        profiles.append("Projet globalement mature")
-
-    if scores.get("funding", 0) < 4:
-        profiles.append("Préparation au financement insuffisante")
-
-    return profiles
+    return interpretations
